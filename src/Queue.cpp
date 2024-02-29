@@ -68,3 +68,17 @@ bool Queue::sendMessage(message_t messageToSend, int msTimeout) {
   }
   return status;
 }
+
+bool Queue::peek(message_t *message) {
+  if (xQueuePeek(_queueHandle, message, portMAX_DELAY) == pdTRUE) {
+    return true;
+  }
+  return false;
+}
+
+bool Queue::peek(message_t *message, int msTimeout) {
+  if (xQueuePeek(_queueHandle, message, msTimeout / portTICK_PERIOD_MS) == pdTRUE) {
+    return true;
+  }
+  return false;
+}
