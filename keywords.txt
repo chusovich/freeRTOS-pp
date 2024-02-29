@@ -1,0 +1,8 @@
+Task   KEYWORD1
+Queue	KEYWORD1
+Timer	KEYWORD1
+MUTEX	KEYWORD1
+
+create   KEYWORD2
+createStatic    KEYWORD2
+sendMessage KEYWORD2
