@@ -13,7 +13,7 @@
 
 typedef struct {
   int id;
-  char data[QUEUE_DATA_BUFFER_SIZE];
+  String data;
 } message_t;
 
 class Queue {
