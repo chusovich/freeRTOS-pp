@@ -8,12 +8,12 @@
 #endif
 
 #ifndef QUEUE_DATA_BUFFER_SIZE
-#define QUEUE_DATA_BUFFER_SIZE 25
+#define QUEUE_DATA_BUFFER_SIZE 100
 #endif
 
-typedef struct {
-  int id;
-  String data;
+typedef struct{
+  char id;
+  char string[QUEUE_DATA_BUFFER_SIZE];
 } message_t;
 
 class Queue {
@@ -23,9 +23,10 @@ public:
   bool create();
   bool createStatic();
   void destroy();
-  bool sendMessage(message_t messageToSend, int msTimeout);
-  bool receiveMessage(message_t *message);
-  bool receiveMessage(message_t *message, int msTimeout);
+  bool enqueue(message_t messageToSend, int msTimeout);
+  void enqueueISR(message_t *messageToSend);
+  bool dequeue(message_t *message);
+  bool dequeue(message_t *message, int msTimeout);
   bool peek(message_t *message);
   bool peek(message_t *message, int msTimeout);
   // data

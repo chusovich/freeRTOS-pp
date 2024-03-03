@@ -30,7 +30,7 @@ void Queue::destroy() {
   vQueueDelete(_queueHandle);
 }
 
-bool Queue::receiveMessage(message_t *message) {
+bool Queue::dequeue(message_t *message) {
   bool status;
   if (_queueHandle != NULL) {  // check just to make sure the queue actually exists
     int ret = xQueueReceive(_queueHandle, message, portMAX_DELAY);
@@ -43,7 +43,7 @@ bool Queue::receiveMessage(message_t *message) {
   return status;
 }
 
-bool Queue::receiveMessage(message_t *message, int msTimeout) {
+bool Queue::dequeue(message_t *message, int msTimeout) {
   bool status;
   if (_queueHandle != NULL) {  // check just to make sure the queue actually exists
     int ret = xQueueReceive(_queueHandle, message, msTimeout / portTICK_PERIOD_MS);
@@ -56,7 +56,7 @@ bool Queue::receiveMessage(message_t *message, int msTimeout) {
   return status;
 }
 
-bool Queue::sendMessage(message_t messageToSend, int msTimeout) {
+bool Queue::enqueue(message_t messageToSend, int msTimeout) {
   bool status;
   if (_queueHandle != NULL && uxQueueSpacesAvailable(_queueHandle) > 0) {
     int ret = xQueueSend(_queueHandle, (void *)&messageToSend, msTimeout / portTICK_PERIOD_MS);
@@ -67,6 +67,14 @@ bool Queue::sendMessage(message_t messageToSend, int msTimeout) {
     status = false;
   }
   return status;
+}
+
+void Queue::enqueueISR(message_t *messageToSend) {
+  BaseType_t xHigherPriorityTaskWoken;
+  xQueueSendFromISR(_queueHandle, messageToSend, &xHigherPriorityTaskWoken);
+  if (xHigherPriorityTaskWoken) {
+    portYIELD_FROM_ISR();
+  }
 }
 
 bool Queue::peek(message_t *message) {
