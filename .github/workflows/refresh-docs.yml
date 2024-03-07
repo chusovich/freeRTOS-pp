@@ -12,12 +12,12 @@ jobs:
         uses: langroodi/doxygenize@v1.7.0
         with:
         # Doxygen configuration file path
-            doxygenconf: ./Doxyfile
+            doxygenconf: /Doxyfile
         # Generated HTML documents output folder
-            htmloutput: ./docs/
+            htmloutput: /docs/
         # GitHub Pages branch name
             ghpagesbranch: gh-pages
         # GitHub Pages directory path
-            ghpagesdir: ./
+            ghpagesdir: /
         # Toggle dark mode CSS
-            darkmode: true
+            darkmode: true           
