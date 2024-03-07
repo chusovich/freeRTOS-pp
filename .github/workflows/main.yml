@@ -42,11 +42,6 @@ jobs:
             - name: esp32:esp32
               source-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
           sketch-paths: |
-            - examples/Central/Scan
-            - examples/Central/PeripheralExplorer
-            - examples/Central/ScanCallback
-            - examples/Central/SensorTagButton
-            - examples/Peripheral/Advertising/EnhancedAdvertising
-            - examples/Peripheral/Advertising/RawDataAdvertising
+            - examples/Blinky
           cli-compile-flags: |
             - --warnings="none"
