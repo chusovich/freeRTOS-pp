@@ -9,15 +9,10 @@ jobs:
       - name: Doxygenize
       # You may pin to the exact commit or the version.
       # uses: langroodi/doxygenize@542946a13bc9021f5ba07c8751e6ab3d84bca154
+        # uses: actions/checkout@v3
         uses: langroodi/doxygenize@v1.7.0
         with:
-        # Doxygen configuration file path
-            doxygenconf: /Doxyfile
-        # Generated HTML documents output folder
-            htmloutput: /docs/
-        # GitHub Pages branch name
-            ghpagesbranch: gh-pages
-        # GitHub Pages directory path
-            ghpagesdir: /
-        # Toggle dark mode CSS
-            darkmode: true           
+          doxygenconf: ./Doxyfile
+          htmloutput: ./doc/html/
+          ghpagesbranch: main
+          ghpagesdir: ./docs/
