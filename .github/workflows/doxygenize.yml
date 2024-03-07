@@ -4,14 +4,10 @@
   uses: langroodi/doxygenize@v1.7.0
   with:
     # Doxygen configuration file path
-    doxygenconf: # default is ./Doxyfile
+    doxygenconf: ./Doxyfile
     # Generated HTML documents output folder
-    htmloutput: # default is ./docs/
+    htmloutput: ./docs/
     # GitHub Pages branch name
-    ghpagesbranch: # default is gh-pages
+    ghpagesbranch: gh-pages
     # GitHub Pages directory path
     ghpagesdir: # default is ./
-    # Toggle dark mode CSS
-    darkmode: # optional
-    # Custom Doxygen pages header HTML file URL
-    customheader: # optional, default is 
