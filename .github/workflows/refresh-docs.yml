@@ -12,7 +12,7 @@ jobs:
         # uses: actions/checkout@v3
         uses: langroodi/doxygenize@v1.7.0
         with:
-          doxygenconf: ./Doxyfile
-          htmloutput: ./doc/html/
+          doxygenconf: /Doxyfile
+          htmloutput: /doc/html/
           ghpagesbranch: main
-          ghpagesdir: ./docs/
+          ghpagesdir: /docs/
