@@ -2,12 +2,12 @@ name: Compile Examples
 on:
   pull_request:
     paths:
-      - ".github/workflows/compile-examples.yml"
+      - ".github/workflows/compile-test.yml"
       - "examples/**"
       - "src/**"
   push:
     paths:
-      - ".github/workflows/compile-examples.yml"
+      - ".github/workflows/compile-test.yml"
       - "examples/**"
       - "src/**"
 
