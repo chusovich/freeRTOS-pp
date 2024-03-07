@@ -11,8 +11,8 @@ jobs:
       # uses: langroodi/doxygenize@542946a13bc9021f5ba07c8751e6ab3d84bca154
         # uses: actions/checkout@v3
         uses: langroodi/doxygenize@v1.7.0
-        with:
-          doxygenconf: /Doxyfile
-          htmloutput: /doc/html/
-          ghpagesbranch: main
-          ghpagesdir: /docs/
+        # with:
+        #   doxygenconf: /Doxyfile
+        #   htmloutput: /doc/html/
+        #   ghpagesbranch: main
+        #   ghpagesdir: /docs/
