@@ -62,6 +62,13 @@ void Task::createTask(void (*TaskFunction)(void*), byte core) {
 }
 #endif
 
+
+/**************************************************************************/
+/*!
+    @brief  Sets the priority the task will run at function to be used. This function tells the object with function to use to run in the task.
+    @param priority A function that contains the code to run int he task. Typically includes a infinite while or for loop.
+*/
+/**************************************************************************/
 void Task::setPriority(int priority) {
   vTaskPrioritySet(_taskHandle, priority);
 }
