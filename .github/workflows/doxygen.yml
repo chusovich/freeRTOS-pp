@@ -5,15 +5,10 @@ name: Doxygen GitHub Pages Deploy Action v2
 on: [push]
 
 jobs:
-  print-start-msg:
+  run-doxygen:
     runs-on: ubuntu-latest
     steps:
-      - name: say-hello
-        run: echo "Installling Doxygen..."
-  install-doxygen:
-    needs: [print-start-msg]
-    runs-on: ubuntu-latest
-    steps:
+      - run: echo "Installing Doxygen..."
       - name: checkout-repo
         uses: actions/checkout@v4
 
@@ -22,6 +17,8 @@ jobs:
         
       - run: pwd
       
+      - run: echo "Creating documentation..."
+
       - name: create documentation
         run: doxygen Doxyfile
               
