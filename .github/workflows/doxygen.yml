@@ -1,5 +1,5 @@
 # workflow name
-name: Doxygen GitHub Pages Deploy Action v2
+name: Manual Doxygen Workflow
 
 # trigger event(s):
 on: [push]
