@@ -23,7 +23,7 @@ jobs:
       - run: pwd
       
       - name: create documentation
-        run: doxygen doc/Doxygile
+        run: doxygen Doxyfile
               
 
         
