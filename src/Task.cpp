@@ -4,19 +4,15 @@
  * @mainpage freeRTOS Task Object
  *
  * @section intro_sec Introduction
- *
  * This is an object oriented wrapper for freeRTOS task functions
  *
  * @section dependencies Dependencies
- * 
  * no dependencies
  *
  * @section author Author
- *
- * Written by Caleb Husovichs.
+ * Written by Caleb Husovich.
  *
  * @section license License
- *
  * BSD license, all text here must be included in any redistribution.
  *
  */
@@ -30,6 +26,12 @@ Task::Task(String name, int stackSize, int priority) {
   _priority = priority;
 }
 
+/**************************************************************************/
+/*!
+    @brief  Sets the task function to be used. This function tells the object with function to use to run in the task.
+    @param TaskFunction A function that contains the code to run int he task. Typically includes a infinite while or for loop.
+*/
+/**************************************************************************/
 void Task::createTask(void (*TaskFunction)(void*)) {
   // (task function, name, stack size, parameter, priority, task handle )
   char nameArray[_name.length()];
