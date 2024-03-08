@@ -1,3 +1,26 @@
+/*!
+ * @file Task.cpp
+ *
+ * @mainpage freeRTOS Task Object
+ *
+ * @section intro_sec Introduction
+ *
+ * This is an object oriented wrapper for freeRTOS task functions
+ *
+ * @section dependencies Dependencies
+ * 
+ * no dependencies
+ *
+ * @section author Author
+ *
+ * Written by Caleb Husovichs.
+ *
+ * @section license License
+ *
+ * BSD license, all text here must be included in any redistribution.
+ *
+ */
+
 #include "Arduino.h"
 #include "Task.h"
 
