@@ -73,10 +73,21 @@ void Task::setPriority(int priority) {
   vTaskPrioritySet(_taskHandle, priority);
 }
 
+
+/**************************************************************************/
+/*!
+    @brief  Stops the task from running. This does not remove from memory.
+*/
+/**************************************************************************/
 void Task::suspendTask() {
   vTaskSuspend(_taskHandle);
 }
 
+/**************************************************************************/
+/*!
+    @brief  Starts running the task again if suspended.
+*/
+/**************************************************************************/
 void Task::resumeTask() {
   vTaskResume(_taskHandle);
 }
