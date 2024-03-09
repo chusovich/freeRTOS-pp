@@ -33,4 +33,4 @@ jobs:
 
           - run: cd /home/runner/work/freeRTOS-pp/freeRTOS-pp/src/
           - run: ls
-          - run: clang-format -i Task.cpp
+          - run: clang-format -i /src/Task.cpp
