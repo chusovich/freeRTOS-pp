@@ -31,4 +31,4 @@ jobs:
           - run: ls
           - run: pwd
 
-          - run: cd /src/
+          - run: cd /home/runner/work/freeRTOS-pp/freeRTOS-pp/src/
