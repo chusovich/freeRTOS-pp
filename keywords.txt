@@ -1,8 +1,36 @@
+# Classes
 Task   KEYWORD1
 Queue	KEYWORD1
 Timer	KEYWORD1
-MUTEX	KEYWORD1
+Mutex KEYWORD1
 
-create   KEYWORD2
-createStatic    KEYWORD2
-sendMessage KEYWORD2
+# Task Methods
+createTask   KEYWORD2
+setPriority    KEYWORD2
+suspendTask KEYWORD2
+resumeTask KEYWORD2
+getCoreAffinity KEYWORD2
+
+# Queue Methods
+create KEYWORD2
+createStatic KEYWORD2
+enqueue KEYWORD2
+enqueueISR KEYWORD2
+dequeue KEYWORD2
+peek KEYWORD2
+
+# Mutex Methods
+create KEYWORD2
+createStatic KEYWORD2
+destroy KEYWORD2
+take KEYWORD2
+give KEYWORD2
+
+# Timer Methods
+create KEYWORD2
+createStatic KEYWORD2
+start KEYWORD2
+destroy KEYWORD2
+reset KEYWORD1
+changeDuration KEYWORD2
+startFromISR KEYWORD2

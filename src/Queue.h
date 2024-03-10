@@ -1,3 +1,10 @@
+/*!
+ * @file Queue.h
+ *
+ * This is a object for freeRTOS queues.
+ *
+ */
+
 #ifndef Queue_h
 #define Queue_h
 #include "Arduino.h"

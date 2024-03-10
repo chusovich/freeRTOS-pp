@@ -137,20 +137,26 @@ $(function(){initNavTree('class_queue.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a700a33f52783f25b9ebd25d67ffb504a" id="r_a700a33f52783f25b9ebd25d67ffb504a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a700a33f52783f25b9ebd25d67ffb504a">Queue</a> (int size)</td></tr>
+<tr class="memdesc:a700a33f52783f25b9ebd25d67ffb504a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delcare the queue with how many elements it will hold.  <br /></td></tr>
 <tr class="separator:a700a33f52783f25b9ebd25d67ffb504a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5e4c6b734af0a855ba495b0c13ba5d4" id="r_af5e4c6b734af0a855ba495b0c13ba5d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5e4c6b734af0a855ba495b0c13ba5d4">create</a> ()</td></tr>
+<tr class="memdesc:af5e4c6b734af0a855ba495b0c13ba5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the queue. This function creates the queue and allocated memory for it in the stack. Use the <a class="el" href="#ae767aefb0e2e2adb30270347a09bc9d2" title="Create the queue. This function creates the queue and allocates it into static memory.">createStatic()</a> method to allocate it to static memory.  <br /></td></tr>
 <tr class="separator:af5e4c6b734af0a855ba495b0c13ba5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae767aefb0e2e2adb30270347a09bc9d2" id="r_ae767aefb0e2e2adb30270347a09bc9d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae767aefb0e2e2adb30270347a09bc9d2">createStatic</a> ()</td></tr>
+<tr class="memdesc:ae767aefb0e2e2adb30270347a09bc9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the queue. This function creates the queue and allocates it into static memory.  <br /></td></tr>
 <tr class="separator:ae767aefb0e2e2adb30270347a09bc9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c1118eb6b378b3f359f07cc1cea6875" id="r_a5c1118eb6b378b3f359f07cc1cea6875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c1118eb6b378b3f359f07cc1cea6875">destroy</a> ()</td></tr>
+<tr class="memdesc:a5c1118eb6b378b3f359f07cc1cea6875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the queue and remove it from memory. This function prevents the queue from being used any more and removes it from memory.  <br /></td></tr>
 <tr class="separator:a5c1118eb6b378b3f359f07cc1cea6875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a934a105a122a0314631c3fd93c3ddf3f" id="r_a934a105a122a0314631c3fd93c3ddf3f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a934a105a122a0314631c3fd93c3ddf3f">enqueue</a> (<a class="el" href="structmessage__t.html">message_t</a> messageToSend, int msTimeout)</td></tr>
 <tr class="separator:a934a105a122a0314631c3fd93c3ddf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73548f0b98583313c63a35d09842f132" id="r_a73548f0b98583313c63a35d09842f132"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73548f0b98583313c63a35d09842f132">enqueueISR</a> (<a class="el" href="structmessage__t.html">message_t</a> *messageToSend)</td></tr>
 <tr class="separator:a73548f0b98583313c63a35d09842f132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02c9035f38207efe34f5d50956b835ec" id="r_a02c9035f38207efe34f5d50956b835ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02c9035f38207efe34f5d50956b835ec">dequeue</a> (<a class="el" href="structmessage__t.html">message_t</a> *message)</td></tr>
+<tr class="memdesc:a02c9035f38207efe34f5d50956b835ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the most recent message from the queue. This function waits for an item to arrive the the queue and remove it from the queue. It never times out.  <br /></td></tr>
 <tr class="separator:a02c9035f38207efe34f5d50956b835ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65c48ca67c848817fe4e1d99203d86f1" id="r_a65c48ca67c848817fe4e1d99203d86f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65c48ca67c848817fe4e1d99203d86f1">dequeue</a> (<a class="el" href="structmessage__t.html">message_t</a> *message, int msTimeout)</td></tr>
+<tr class="memdesc:a65c48ca67c848817fe4e1d99203d86f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the message to arrive in the queue until the timeout period has elapsed. This function waits for an item to arrive the the queue and remove it from the queue, unless the timeout period elapses first, in which case it returns a null value.  <br /></td></tr>
 <tr class="separator:a65c48ca67c848817fe4e1d99203d86f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec9839e0d9c43b66b37dd3f3d45676d8" id="r_aec9839e0d9c43b66b37dd3f3d45676d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec9839e0d9c43b66b37dd3f3d45676d8">peek</a> (<a class="el" href="structmessage__t.html">message_t</a> *message)</td></tr>
 <tr class="separator:aec9839e0d9c43b66b37dd3f3d45676d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +179,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Delcare the queue with how many elements it will hold. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -191,6 +199,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create the queue. This function creates the queue and allocated memory for it in the stack. Use the <a class="el" href="#ae767aefb0e2e2adb30270347a09bc9d2" title="Create the queue. This function creates the queue and allocates it into static memory.">createStatic()</a> method to allocate it to static memory. </p>
+
 </div>
 </div>
 <a id="ae767aefb0e2e2adb30270347a09bc9d2" name="ae767aefb0e2e2adb30270347a09bc9d2"></a>
@@ -208,6 +218,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create the queue. This function creates the queue and allocates it into static memory. </p>
+
 </div>
 </div>
 <a id="a02c9035f38207efe34f5d50956b835ec" name="a02c9035f38207efe34f5d50956b835ec"></a>
@@ -224,6 +236,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Remove the most recent message from the queue. This function waits for an item to arrive the the queue and remove it from the queue. It never times out. </p>
 
 </div>
 </div>
@@ -246,6 +260,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Waits for the message to arrive in the queue until the timeout period has elapsed. This function waits for an item to arrive the the queue and remove it from the queue, unless the timeout period elapses first, in which case it returns a null value. </p>
+
 </div>
 </div>
 <a id="a5c1118eb6b378b3f359f07cc1cea6875" name="a5c1118eb6b378b3f359f07cc1cea6875"></a>
@@ -262,6 +278,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Delete the queue and remove it from memory. This function prevents the queue from being used any more and removes it from memory. </p>
 
 </div>
 </div>

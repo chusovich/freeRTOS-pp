@@ -1,10 +1,41 @@
+/*!
+ * @file Queue.cpp
+ *
+ * @page Queues Queues
+ *
+ * @section intro_sec Introduction
+ * This is an object oriented wrapper for freeRTOS queue functions
+ *
+ * @section examples_sec Typical Examples
+ * Here are some examples
+ * 
+ * @code
+ * void setup() {
+ *	 Serial.begin(9600);
+ *	 Queue.create();
+ * }
+ * @endcode
+ *
+ */
+
 #include "Arduino.h"
 #include "Queue.h"
 
+
+/**************************************************************************/
+/*! 
+    @brief  Delcare the queue with how many elements it will hold.
+*/
+/**************************************************************************/
 Queue::Queue(int size) {
   _queueSize = size;
 }
 
+/**************************************************************************/
+/*! 
+    @brief  Create the queue. This function creates the queue and allocated memory for it in the stack. Use the createStatic() method to allocate it to static memory.
+*/
+/**************************************************************************/
 bool Queue::create() {
   _queueHandle = xQueueCreate(_queueSize, sizeof(message_t));
   // check if the queue was successfully created
@@ -15,6 +46,11 @@ bool Queue::create() {
   }
 }
 
+/**************************************************************************/
+/*! 
+    @brief  Create the queue. This function creates the queue and allocates it into static memory.
+*/
+/**************************************************************************/
 bool Queue::createStatic() {
   uint8_t queueStorageArea[_queueSize * sizeof(message_t)];
   _queueHandle = xQueueCreateStatic(_queueSize, sizeof(message_t), queueStorageArea, &_staticQueue);
@@ -26,10 +62,20 @@ bool Queue::createStatic() {
   }
 }
 
+/**************************************************************************/
+/*! 
+    @brief  Delete the queue and remove it from memory. This function prevents the queue from being used any more and removes it from memory.
+*/
+/**************************************************************************/
 void Queue::destroy() {
   vQueueDelete(_queueHandle);
 }
 
+/**************************************************************************/
+/*! 
+    @brief  Remove the most recent message from the queue. This function waits for an item to arrive the the queue and remove it from the queue. It never times out.
+*/
+/**************************************************************************/
 bool Queue::dequeue(message_t *message) {
   bool status;
   if (_queueHandle != NULL) {  // check just to make sure the queue actually exists
@@ -43,6 +89,11 @@ bool Queue::dequeue(message_t *message) {
   return status;
 }
 
+/**************************************************************************/
+/*! 
+    @brief  Waits for the message to arrive in the queue until the timeout period has elapsed. This function waits for an item to arrive the the queue and remove it from the queue, unless the timeout period elapses first, in which case it returns a null value.
+*/
+/**************************************************************************/
 bool Queue::dequeue(message_t *message, int msTimeout) {
   bool status;
   if (_queueHandle != NULL) {  // check just to make sure the queue actually exists

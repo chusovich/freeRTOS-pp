@@ -25,7 +25,14 @@
 var NAVTREE =
 [
   [ "freeRTOS++", "index.html", [
-    [ "freeRTOS Task Object", "index.html", "index" ],
+    [ "Overview", "_overview.html", [
+      [ "Introduction", "_overview.html#intro_sec", null ],
+      [ "Dependencies", "_overview.html#dependencies", null ],
+      [ "Author", "_overview.html#author", null ],
+      [ "License", "_overview.html#license", null ]
+    ] ],
+    [ "Queues", "_queues.html", null ],
+    [ "Tasks", "_tasks.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

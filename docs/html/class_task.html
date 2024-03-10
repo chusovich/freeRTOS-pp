@@ -137,20 +137,21 @@ $(function(){initNavTree('class_task.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ce71fa8c54468b3789b617b75be3fee" id="r_a0ce71fa8c54468b3789b617b75be3fee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ce71fa8c54468b3789b617b75be3fee">Task</a> (String name, int stackSize, int priority)</td></tr>
+<tr class="memdesc:a0ce71fa8c54468b3789b617b75be3fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that wraps common freeRTOS task functions. Here set a name of the task, the number of bytes in the stack to be allocated to the task, and the priority of the task the scheduler will use.  <br /></td></tr>
 <tr class="separator:a0ce71fa8c54468b3789b617b75be3fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e0605da358b12a4827829120831afcf" id="r_a5e0605da358b12a4827829120831afcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e0605da358b12a4827829120831afcf">createTask</a> (void(*TaskFunction)(void *))</td></tr>
-<tr class="memdesc:a5e0605da358b12a4827829120831afcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the task function to be used. This function tells the object with function to use to run in the task.  <br /></td></tr>
+<tr class="memdesc:a5e0605da358b12a4827829120831afcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the task function to be used. The tasks function is typically a infinite while- or for- loop. This functions initializes the task and immeadiately start being run by the schduler. If this function is called on a multi-core system, the freeRTOS will decide which core to run the task on.  <br /></td></tr>
 <tr class="separator:a5e0605da358b12a4827829120831afcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e69da2e594ac1efa70facb0577310da" id="r_a9e69da2e594ac1efa70facb0577310da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e69da2e594ac1efa70facb0577310da">createTask</a> (void(*TaskFunction)(void *), byte core)</td></tr>
 <tr class="separator:a9e69da2e594ac1efa70facb0577310da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc93078022eabed8325f164e4eedc37a" id="r_acc93078022eabed8325f164e4eedc37a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc93078022eabed8325f164e4eedc37a">setPriority</a> (int priority)</td></tr>
-<tr class="memdesc:acc93078022eabed8325f164e4eedc37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority the task will run at function to be used. This function tells the object with function to use to run in the task.  <br /></td></tr>
+<tr class="memdesc:acc93078022eabed8325f164e4eedc37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority the scheduler will use when scheduling the task. The priority of a tasks determines when a task will run if multiple tasks are in the ready state. The lowest priority is zero, the highest priority is seven.  <br /></td></tr>
 <tr class="separator:acc93078022eabed8325f164e4eedc37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1299c006eb4ebba37edf810e221649c" id="r_ae1299c006eb4ebba37edf810e221649c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1299c006eb4ebba37edf810e221649c">suspendTask</a> ()</td></tr>
-<tr class="memdesc:ae1299c006eb4ebba37edf810e221649c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the task from running. This does not remove from memory.  <br /></td></tr>
+<tr class="memdesc:ae1299c006eb4ebba37edf810e221649c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the task from running. This function stops the task from running, but it does not remove from memory. It puts it in the 'suspended' state.  <br /></td></tr>
 <tr class="separator:ae1299c006eb4ebba37edf810e221649c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b222d45ae58499dfbd85dfa094226de" id="r_a9b222d45ae58499dfbd85dfa094226de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b222d45ae58499dfbd85dfa094226de">resumeTask</a> ()</td></tr>
-<tr class="memdesc:a9b222d45ae58499dfbd85dfa094226de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts running the task again if suspended.  <br /></td></tr>
+<tr class="memdesc:a9b222d45ae58499dfbd85dfa094226de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts running the task again if suspended. This function moves a task from the suspended to the ready state. The schedule will immeadiately start to run the task if no higher priority task is in a ready state.  <br /></td></tr>
 <tr class="separator:a9b222d45ae58499dfbd85dfa094226de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -178,6 +179,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Class that wraps common freeRTOS task functions. Here set a name of the task, the number of bytes in the stack to be allocated to the task, and the priority of the task the scheduler will use. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -196,10 +199,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the task function to be used. This function tells the object with function to use to run in the task. </p>
+<p>Sets the task function to be used. The tasks function is typically a infinite while- or for- loop. This functions initializes the task and immeadiately start being run by the schduler. If this function is called on a multi-core system, the freeRTOS will decide which core to run the task on. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">TaskFunction</td><td>A function that contains the code to run int he task. Typically includes a infinite while or for loop. </td></tr>
+    <tr><td class="paramname">TaskFunction</td><td>A function that contains the code that runs in the task. Typically involves a infinite while or for loop. </td></tr>
   </table>
   </dd>
 </dl>
@@ -242,7 +245,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Starts running the task again if suspended. </p>
+<p>Starts running the task again if suspended. This function moves a task from the suspended to the ready state. The schedule will immeadiately start to run the task if no higher priority task is in a ready state. </p>
 
 </div>
 </div>
@@ -261,7 +264,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the priority the task will run at function to be used. This function tells the object with function to use to run in the task. </p>
+<p>Sets the priority the scheduler will use when scheduling the task. The priority of a tasks determines when a task will run if multiple tasks are in the ready state. The lowest priority is zero, the highest priority is seven. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">priority</td><td>A function that contains the code to run int he task. Typically includes a infinite while or for loop. </td></tr>
@@ -286,7 +289,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Stops the task from running. This does not remove from memory. </p>
+<p>Stops the task from running. This function stops the task from running, but it does not remove from memory. It puts it in the 'suspended' state. </p>
 
 </div>
 </div>

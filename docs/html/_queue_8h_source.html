@@ -133,63 +133,64 @@ $(function(){initNavTree('_queue_8h_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Queue.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_queue_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef Queue_h</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define Queue_h</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Arduino.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#if defined(ARDUINO_ARCH_RP2040)</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;FreeRTOS.h&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="_queue_8h.html">queue.h</a>&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef QUEUE_DATA_BUFFER_SIZE</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="_queue_8h.html#a7b055b284819e1b653684ff297fa18e3">   11</a></span><span class="preprocessor">#define QUEUE_DATA_BUFFER_SIZE 100</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structmessage__t.html">   14</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structmessage__t.html#a3d6ee2afc00cb94d06bb4ea548d15dc6">   15</a></span>  <span class="keywordtype">char</span> <a class="code hl_variable" href="structmessage__t.html#a3d6ee2afc00cb94d06bb4ea548d15dc6">id</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structmessage__t.html#a2d83de3334c4901ea55a814f5eb92a9a">   16</a></span>  <span class="keywordtype">char</span> <span class="keywordtype">string</span>[<a class="code hl_define" href="_queue_8h.html#a7b055b284819e1b653684ff297fa18e3">QUEUE_DATA_BUFFER_SIZE</a>];</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>} <a class="code hl_struct" href="structmessage__t.html">message_t</a>;</div>
+<a href="_queue_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef Queue_h</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define Queue_h</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;Arduino.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#if defined(ARDUINO_ARCH_RP2040)</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;FreeRTOS.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="_queue_8h.html">queue.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef QUEUE_DATA_BUFFER_SIZE</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="_queue_8h.html#a7b055b284819e1b653684ff297fa18e3">   18</a></span><span class="preprocessor">#define QUEUE_DATA_BUFFER_SIZE 100</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structmessage__t.html">   21</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structmessage__t.html#a3d6ee2afc00cb94d06bb4ea548d15dc6">   22</a></span>  <span class="keywordtype">char</span> <a class="code hl_variable" href="structmessage__t.html#a3d6ee2afc00cb94d06bb4ea548d15dc6">id</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structmessage__t.html#a2d83de3334c4901ea55a814f5eb92a9a">   23</a></span>  <span class="keywordtype">char</span> <span class="keywordtype">string</span>[<a class="code hl_define" href="_queue_8h.html#a7b055b284819e1b653684ff297fa18e3">QUEUE_DATA_BUFFER_SIZE</a>];</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>} <a class="code hl_struct" href="structmessage__t.html">message_t</a>;</div>
 </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_queue.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_queue.html">Queue</a> {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">// functions</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <a class="code hl_function" href="class_queue.html#a700a33f52783f25b9ebd25d67ffb504a">Queue</a>(<span class="keywordtype">int</span> size);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#af5e4c6b734af0a855ba495b0c13ba5d4">create</a>();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#ae767aefb0e2e2adb30270347a09bc9d2">createStatic</a>();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_queue.html#a5c1118eb6b378b3f359f07cc1cea6875">destroy</a>();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#a934a105a122a0314631c3fd93c3ddf3f">enqueue</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> messageToSend, <span class="keywordtype">int</span> msTimeout);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_queue.html#a73548f0b98583313c63a35d09842f132">enqueueISR</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> *messageToSend);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#a02c9035f38207efe34f5d50956b835ec">dequeue</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> *message);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#a02c9035f38207efe34f5d50956b835ec">dequeue</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> *message, <span class="keywordtype">int</span> msTimeout);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#aec9839e0d9c43b66b37dd3f3d45676d8">peek</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> *message);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#aec9839e0d9c43b66b37dd3f3d45676d8">peek</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> *message, <span class="keywordtype">int</span> msTimeout);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="comment">// data</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">// data</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  QueueHandle_t _queueHandle;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordtype">int</span> _queueSize;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">static</span> StaticQueue_t _staticQueue;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_queue.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_queue.html">Queue</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">// functions</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_function" href="class_queue.html#a700a33f52783f25b9ebd25d67ffb504a">Queue</a>(<span class="keywordtype">int</span> size);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#af5e4c6b734af0a855ba495b0c13ba5d4">create</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#ae767aefb0e2e2adb30270347a09bc9d2">createStatic</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_queue.html#a5c1118eb6b378b3f359f07cc1cea6875">destroy</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#a934a105a122a0314631c3fd93c3ddf3f">enqueue</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> messageToSend, <span class="keywordtype">int</span> msTimeout);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_queue.html#a73548f0b98583313c63a35d09842f132">enqueueISR</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> *messageToSend);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#a02c9035f38207efe34f5d50956b835ec">dequeue</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> *message);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#a02c9035f38207efe34f5d50956b835ec">dequeue</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> *message, <span class="keywordtype">int</span> msTimeout);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#aec9839e0d9c43b66b37dd3f3d45676d8">peek</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> *message);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_queue.html#aec9839e0d9c43b66b37dd3f3d45676d8">peek</a>(<a class="code hl_struct" href="structmessage__t.html">message_t</a> *message, <span class="keywordtype">int</span> msTimeout);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="comment">// data</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="comment">// data</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  QueueHandle_t _queueHandle;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">int</span> _queueSize;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">static</span> StaticQueue_t _staticQueue;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
 </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_queue_8h_html"><div class="ttname"><a href="_queue_8h.html">Queue.h</a></div></div>
-<div class="ttc" id="a_queue_8h_html_a7b055b284819e1b653684ff297fa18e3"><div class="ttname"><a href="_queue_8h.html#a7b055b284819e1b653684ff297fa18e3">QUEUE_DATA_BUFFER_SIZE</a></div><div class="ttdeci">#define QUEUE_DATA_BUFFER_SIZE</div><div class="ttdef"><b>Definition</b> Queue.h:11</div></div>
-<div class="ttc" id="aclass_queue_html"><div class="ttname"><a href="class_queue.html">Queue</a></div><div class="ttdef"><b>Definition</b> Queue.h:19</div></div>
-<div class="ttc" id="aclass_queue_html_a02c9035f38207efe34f5d50956b835ec"><div class="ttname"><a href="class_queue.html#a02c9035f38207efe34f5d50956b835ec">Queue::dequeue</a></div><div class="ttdeci">bool dequeue(message_t *message)</div><div class="ttdef"><b>Definition</b> Queue.cpp:33</div></div>
-<div class="ttc" id="aclass_queue_html_a5c1118eb6b378b3f359f07cc1cea6875"><div class="ttname"><a href="class_queue.html#a5c1118eb6b378b3f359f07cc1cea6875">Queue::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdef"><b>Definition</b> Queue.cpp:29</div></div>
-<div class="ttc" id="aclass_queue_html_a700a33f52783f25b9ebd25d67ffb504a"><div class="ttname"><a href="class_queue.html#a700a33f52783f25b9ebd25d67ffb504a">Queue::Queue</a></div><div class="ttdeci">Queue(int size)</div><div class="ttdef"><b>Definition</b> Queue.cpp:4</div></div>
-<div class="ttc" id="aclass_queue_html_a73548f0b98583313c63a35d09842f132"><div class="ttname"><a href="class_queue.html#a73548f0b98583313c63a35d09842f132">Queue::enqueueISR</a></div><div class="ttdeci">void enqueueISR(message_t *messageToSend)</div><div class="ttdef"><b>Definition</b> Queue.cpp:72</div></div>
-<div class="ttc" id="aclass_queue_html_a934a105a122a0314631c3fd93c3ddf3f"><div class="ttname"><a href="class_queue.html#a934a105a122a0314631c3fd93c3ddf3f">Queue::enqueue</a></div><div class="ttdeci">bool enqueue(message_t messageToSend, int msTimeout)</div><div class="ttdef"><b>Definition</b> Queue.cpp:59</div></div>
-<div class="ttc" id="aclass_queue_html_ae767aefb0e2e2adb30270347a09bc9d2"><div class="ttname"><a href="class_queue.html#ae767aefb0e2e2adb30270347a09bc9d2">Queue::createStatic</a></div><div class="ttdeci">bool createStatic()</div><div class="ttdef"><b>Definition</b> Queue.cpp:18</div></div>
-<div class="ttc" id="aclass_queue_html_aec9839e0d9c43b66b37dd3f3d45676d8"><div class="ttname"><a href="class_queue.html#aec9839e0d9c43b66b37dd3f3d45676d8">Queue::peek</a></div><div class="ttdeci">bool peek(message_t *message)</div><div class="ttdef"><b>Definition</b> Queue.cpp:80</div></div>
-<div class="ttc" id="aclass_queue_html_af5e4c6b734af0a855ba495b0c13ba5d4"><div class="ttname"><a href="class_queue.html#af5e4c6b734af0a855ba495b0c13ba5d4">Queue::create</a></div><div class="ttdeci">bool create()</div><div class="ttdef"><b>Definition</b> Queue.cpp:8</div></div>
-<div class="ttc" id="astructmessage__t_html"><div class="ttname"><a href="structmessage__t.html">message_t</a></div><div class="ttdef"><b>Definition</b> Queue.h:14</div></div>
-<div class="ttc" id="astructmessage__t_html_a3d6ee2afc00cb94d06bb4ea548d15dc6"><div class="ttname"><a href="structmessage__t.html#a3d6ee2afc00cb94d06bb4ea548d15dc6">message_t::id</a></div><div class="ttdeci">char id</div><div class="ttdef"><b>Definition</b> Queue.h:15</div></div>
+<div class="ttc" id="a_queue_8h_html_a7b055b284819e1b653684ff297fa18e3"><div class="ttname"><a href="_queue_8h.html#a7b055b284819e1b653684ff297fa18e3">QUEUE_DATA_BUFFER_SIZE</a></div><div class="ttdeci">#define QUEUE_DATA_BUFFER_SIZE</div><div class="ttdef"><b>Definition</b> Queue.h:18</div></div>
+<div class="ttc" id="aclass_queue_html"><div class="ttname"><a href="class_queue.html">Queue</a></div><div class="ttdef"><b>Definition</b> Queue.h:26</div></div>
+<div class="ttc" id="aclass_queue_html_a02c9035f38207efe34f5d50956b835ec"><div class="ttname"><a href="class_queue.html#a02c9035f38207efe34f5d50956b835ec">Queue::dequeue</a></div><div class="ttdeci">bool dequeue(message_t *message)</div><div class="ttdoc">Remove the most recent message from the queue. This function waits for an item to arrive the the queu...</div><div class="ttdef"><b>Definition</b> Queue.cpp:79</div></div>
+<div class="ttc" id="aclass_queue_html_a5c1118eb6b378b3f359f07cc1cea6875"><div class="ttname"><a href="class_queue.html#a5c1118eb6b378b3f359f07cc1cea6875">Queue::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdoc">Delete the queue and remove it from memory. This function prevents the queue from being used any more...</div><div class="ttdef"><b>Definition</b> Queue.cpp:70</div></div>
+<div class="ttc" id="aclass_queue_html_a700a33f52783f25b9ebd25d67ffb504a"><div class="ttname"><a href="class_queue.html#a700a33f52783f25b9ebd25d67ffb504a">Queue::Queue</a></div><div class="ttdeci">Queue(int size)</div><div class="ttdoc">Delcare the queue with how many elements it will hold.</div><div class="ttdef"><b>Definition</b> Queue.cpp:30</div></div>
+<div class="ttc" id="aclass_queue_html_a73548f0b98583313c63a35d09842f132"><div class="ttname"><a href="class_queue.html#a73548f0b98583313c63a35d09842f132">Queue::enqueueISR</a></div><div class="ttdeci">void enqueueISR(message_t *messageToSend)</div><div class="ttdef"><b>Definition</b> Queue.cpp:123</div></div>
+<div class="ttc" id="aclass_queue_html_a934a105a122a0314631c3fd93c3ddf3f"><div class="ttname"><a href="class_queue.html#a934a105a122a0314631c3fd93c3ddf3f">Queue::enqueue</a></div><div class="ttdeci">bool enqueue(message_t messageToSend, int msTimeout)</div><div class="ttdef"><b>Definition</b> Queue.cpp:110</div></div>
+<div class="ttc" id="aclass_queue_html_ae767aefb0e2e2adb30270347a09bc9d2"><div class="ttname"><a href="class_queue.html#ae767aefb0e2e2adb30270347a09bc9d2">Queue::createStatic</a></div><div class="ttdeci">bool createStatic()</div><div class="ttdoc">Create the queue. This function creates the queue and allocates it into static memory.</div><div class="ttdef"><b>Definition</b> Queue.cpp:54</div></div>
+<div class="ttc" id="aclass_queue_html_aec9839e0d9c43b66b37dd3f3d45676d8"><div class="ttname"><a href="class_queue.html#aec9839e0d9c43b66b37dd3f3d45676d8">Queue::peek</a></div><div class="ttdeci">bool peek(message_t *message)</div><div class="ttdef"><b>Definition</b> Queue.cpp:131</div></div>
+<div class="ttc" id="aclass_queue_html_af5e4c6b734af0a855ba495b0c13ba5d4"><div class="ttname"><a href="class_queue.html#af5e4c6b734af0a855ba495b0c13ba5d4">Queue::create</a></div><div class="ttdeci">bool create()</div><div class="ttdoc">Create the queue. This function creates the queue and allocated memory for it in the stack....</div><div class="ttdef"><b>Definition</b> Queue.cpp:39</div></div>
+<div class="ttc" id="astructmessage__t_html"><div class="ttname"><a href="structmessage__t.html">message_t</a></div><div class="ttdef"><b>Definition</b> Queue.h:21</div></div>
+<div class="ttc" id="astructmessage__t_html_a3d6ee2afc00cb94d06bb4ea548d15dc6"><div class="ttname"><a href="structmessage__t.html#a3d6ee2afc00cb94d06bb4ea548d15dc6">message_t::id</a></div><div class="ttdeci">char id</div><div class="ttdef"><b>Definition</b> Queue.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
