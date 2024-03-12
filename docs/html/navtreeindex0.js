@@ -12,12 +12,9 @@ var NAVTREEINDEX0 =
 "_queue_8h.html":[4,0,0,4],
 "_queue_8h.html#a7b055b284819e1b653684ff297fa18e3":[4,0,0,4,2],
 "_queue_8h_source.html":[4,0,0,4],
-"_queues.html":[1],
-"_queues.html#examples_sec":[1,0],
 "_task_8cpp.html":[4,0,0,5],
 "_task_8h.html":[4,0,0,6],
 "_task_8h_source.html":[4,0,0,6],
-"_tasks.html":[2],
 "_timer_8cpp.html":[4,0,0,7],
 "_timer_8h.html":[4,0,0,8],
 "_timer_8h_source.html":[4,0,0,8],
@@ -68,7 +65,10 @@ var NAVTREEINDEX0 =
 "globals_defs.html":[4,1,1],
 "index.html":[],
 "pages.html":[],
+"queue_page.html":[1],
+"queue_page.html#examples_sec":[1,0],
 "structmessage__t.html":[3,0,0],
 "structmessage__t.html#a2d83de3334c4901ea55a814f5eb92a9a":[3,0,0,1],
-"structmessage__t.html#a3d6ee2afc00cb94d06bb4ea548d15dc6":[3,0,0,0]
+"structmessage__t.html#a3d6ee2afc00cb94d06bb4ea548d15dc6":[3,0,0,0],
+"task_page.html":[2]
 };
