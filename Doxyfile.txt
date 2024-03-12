@@ -42,7 +42,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "Doxygen Awesome"
+PROJECT_NAME           = "freeRTOS++"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -54,21 +54,21 @@ PROJECT_NUMBER         =
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "Modern Doxygen theme"
+PROJECT_BRIEF          = "ojected-oriented wrapper for freeRTOS"
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = ./logo.drawio.svg
+PROJECT_LOGO           = 
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = docs
+OUTPUT_DIRECTORY       = ./docs
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create up to 4096
 # sub-directories (in 2 levels) under the output directory of each output format
@@ -917,12 +917,8 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = include \
-                         README.md \
-                         docs/extensions.md \
-                         docs/customization.md \
-                         docs/tricks.md
-
+INPUT                  = ./src
+                         
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
 # libiconv (or the iconv built into libc) for the transcoding. See the libiconv
@@ -1334,7 +1330,7 @@ HTML_FILE_EXTENSION    = .html
 # of the possible markers and block names see the documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_HEADER            = doxygen-custom/header.html
+HTML_HEADER            = ./doxygen-awesome-css/doxygen-custom/header.html
 
 # The HTML_FOOTER tag can be used to specify a user-defined HTML footer for each
 # generated HTML page. If the tag is left blank doxygen will generate a standard
@@ -1374,11 +1370,11 @@ HTML_STYLESHEET        =
 # documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_EXTRA_STYLESHEET  = doxygen-awesome.css \
-                         doxygen-custom/custom.css \
-                         doxygen-awesome-sidebar-only.css \
-                         doxygen-awesome-sidebar-only-darkmode-toggle.css \
-                         doxygen-custom/custom-alternative.css
+HTML_EXTRA_STYLESHEET  = ./doxygen-awesome-cssdoxygen-awesome.css \
+                         ./doxygen-awesome-cssdoxygen-custom/custom.css \
+                         ./doxygen-awesome-cssdoxygen-awesome-sidebar-only.css \
+                         ./doxygen-awesome-cssdoxygen-awesome-sidebar-only-darkmode-toggle.css \
+                         ./doxygen-awesome-cssdoxygen-custom/custom-alternative.css
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note
@@ -1388,12 +1384,12 @@ HTML_EXTRA_STYLESHEET  = doxygen-awesome.css \
 # files will be copied as-is; there are no commands or markers available.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_EXTRA_FILES       = doxygen-awesome-darkmode-toggle.js \
-                         doxygen-awesome-fragment-copy-button.js \
-                         doxygen-awesome-paragraph-link.js \
-                         doxygen-custom/toggle-alternative-theme.js \
-                         doxygen-awesome-interactive-toc.js \
-                         doxygen-awesome-tabs.js
+HTML_EXTRA_FILES       = ./doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js \
+                         ./doxygen-awesome-css/doxygen-awesome-fragment-copy-button.js \
+                         ./doxygen-awesome-css/doxygen-awesome-paragraph-link.js \
+                         ./doxygen-awesome-css/doxygen-custom/toggle-alternative-theme.js \
+                         ./doxygen-awesome-css/doxygen-awesome-interactive-toc.js \
+                         ./doxygen-awesome-css/doxygen-awesome-tabs.js
 
 # The HTML_COLORSTYLE tag can be used to specify if the generated HTML output
 # should be rendered with a dark or light theme.
