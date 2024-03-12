@@ -10,10 +10,18 @@
  * Below is an example of the required elements to run a task
  *
  * @code
- * Task myTask("myTaskName",1024,1); // task name, stack size in bytes, scheduler priority
+ * Task myTask("myTaskName", 1024, 1); // task name, stack size in bytes, scheduler priority
+ * 
+ * void taskFunction() {
+ *   for(;;) {
+ *	Serial.println("Task running...");
+ *	vTaskDelay(1000);
+ *   }
+ * }
+ *
  * void setup() {
  *   Serial.begin(115200);
- *   myTask.create()
+ *   myTask.create(taskFunction);
  * }
  *
 * void taskFunction() {
@@ -49,7 +57,7 @@ Task::Task(String name, int stackSize, int priority) {
     @param TaskFunction A function that contains the code that runs in the task. Typically involves a infinite while or for loop.
 */
 /**************************************************************************/
-void Task::createTask(void (*TaskFunction)(void*)) {
+void Task::create(void (*TaskFunction)(void*)) {
   // (task function, name, stack size, parameter, priority, task handle )
   char nameArray[_name.length()];
   _name.toCharArray(nameArray, _name.length());
@@ -63,7 +71,7 @@ void Task::createTask(void (*TaskFunction)(void*)) {
     @param TaskFunction A function that contains the code that runs in the task. Typically involves a infinite while or for loop.
 */
 /**************************************************************************/
-void Task::createTask(void (*TaskFunction)(void*), byte core) {
+void Task::create(void (*TaskFunction)(void*), byte core) {
   // (task function, name, stack size, parameter to pass, priority, task handle )
   char nameArray[_name.length()];
   _name.toCharArray(nameArray, _name.length());
@@ -78,7 +86,7 @@ void Task::createTask(void (*TaskFunction)(void*), byte core) {
     @param TaskFunction A function that contains the code that runs in the task. Typically involves a infinite while or for loop.
 */
 /**************************************************************************/
-void Task::createTask(void (*TaskFunction)(void*), byte core) {
+void Task::create(void (*TaskFunction)(void*), byte core) {
   // (task function, name, stack size, parameter, priority, task handle )
   char nameArray[_name.length()];
   _name.toCharArray(nameArray, _name.length());
