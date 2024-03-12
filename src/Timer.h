@@ -7,11 +7,8 @@
 #include <timers.h>
 #endif
 
-// to-do
-// 1) encapsulate the timer callback functions
 class Timer {
 public:
-  // functions
   bool create(const char *timerName, int msDuration, bool autoRestart, int timerID, void callbackFunction(TimerHandle_t handle));
   bool createStatic(const char *timerName, int msDuration, bool autoRestart, int timerID, void callbackFunction(TimerHandle_t handle));
   bool start(int msToBlock);
@@ -19,11 +16,8 @@ public:
   bool reset(int msToBlock);
   bool changeDuration(int msDuration, int msToBlock);
   bool startFromISR();
-  TimerHandle_t _timerHandle;
-  // data
-
 private:
   static StaticTimer_t _staticHandle;
-  // data
+  TimerHandle_t _timerHandle;
 };
 #endif
