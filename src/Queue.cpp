@@ -6,7 +6,7 @@
  * @section intro_sec Introduction
  * This is an object oriented wrapper for freeRTOS queue functions
  *
- * @section intro_sec Code Examples
+ * @section examples_sec Code Examples
  * Here are some examples
  * 
  * @code
@@ -32,8 +32,7 @@ Queue::Queue(int size) {
 
 /**************************************************************************/
 /*! 
-    @brief  Create the queue. 
-    This function creates the queue and allocated memory for it in the stack. Use the createStatic() method to allocate it to static memory.
+    @brief  Create the queue and allocated memory for it in the stack. Use the createStatic() method to allocate it to static memory.
 */
 /**************************************************************************/
 bool Queue::create() {
@@ -48,8 +47,7 @@ bool Queue::create() {
 
 /**************************************************************************/
 /*! 
-    @brief  Create the queue. 
-    This function creates the queue and allocates it into static memory.
+    @brief  Create the queue and allocates it to static memory.
 */
 /**************************************************************************/
 bool Queue::createStatic() {
@@ -65,8 +63,7 @@ bool Queue::createStatic() {
 
 /**************************************************************************/
 /*! 
-    @brief  Delete the queue and remove it from memory. 
-    This function prevents the queue from being used any more and removes it from memory.
+    @brief  Delete the queue and remove it from memory. After calling this function the queue can no longer be used and it is removed from memory
 */
 /**************************************************************************/
 void Queue::destroy() {
