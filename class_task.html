@@ -131,10 +131,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ce71fa8c54468b3789b617b75be3fee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a0ce71fa8c54468b3789b617b75be3fee">Task</a> (String name, int stackSize, int priority)</td></tr>
 <tr class="memdesc:a0ce71fa8c54468b3789b617b75be3fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that wraps common freeRTOS task functions. Here set a name of the task, the number of bytes in the stack to be allocated to the task, and the priority of the task the scheduler will use.  <a href="class_task.html#a0ce71fa8c54468b3789b617b75be3fee">More...</a><br /></td></tr>
 <tr class="separator:a0ce71fa8c54468b3789b617b75be3fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e0605da358b12a4827829120831afcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a5e0605da358b12a4827829120831afcf">createTask</a> (void(*TaskFunction)(void *))</td></tr>
-<tr class="separator:a5e0605da358b12a4827829120831afcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e69da2e594ac1efa70facb0577310da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a9e69da2e594ac1efa70facb0577310da">createTask</a> (void(*TaskFunction)(void *), byte core)</td></tr>
-<tr class="separator:a9e69da2e594ac1efa70facb0577310da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5edcce9d67db9d0c39116ac33f5635b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a5edcce9d67db9d0c39116ac33f5635b6">create</a> (void(*TaskFunction)(void *))</td></tr>
+<tr class="memdesc:a5edcce9d67db9d0c39116ac33f5635b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the task function to be used. The tasks function is typically a infinite while- or for- loop. This functions initializes the task and immeadiately start being run by the schduler. If this function is called on a multi-core system, the freeRTOS will decide which core to run the task on.  <a href="class_task.html#a5edcce9d67db9d0c39116ac33f5635b6">More...</a><br /></td></tr>
+<tr class="separator:a5edcce9d67db9d0c39116ac33f5635b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874d11efef69ea6917c13963b6ff2b2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a874d11efef69ea6917c13963b6ff2b2e">create</a> (void(*TaskFunction)(void *), byte core)</td></tr>
+<tr class="separator:a874d11efef69ea6917c13963b6ff2b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc93078022eabed8325f164e4eedc37a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#acc93078022eabed8325f164e4eedc37a">setPriority</a> (int priority)</td></tr>
 <tr class="memdesc:acc93078022eabed8325f164e4eedc37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority the scheduler will use when scheduling the task. The priority of a tasks determines when a task will run if multiple tasks are in the ready state. The lowest priority is zero, the highest priority is seven.  <a href="class_task.html#acc93078022eabed8325f164e4eedc37a">More...</a><br /></td></tr>
 <tr class="separator:acc93078022eabed8325f164e4eedc37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,14 +184,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5e0605da358b12a4827829120831afcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e0605da358b12a4827829120831afcf">&#9670;&nbsp;</a></span>createTask() <span class="overload">[1/2]</span></h2>
+<a id="a5edcce9d67db9d0c39116ac33f5635b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5edcce9d67db9d0c39116ac33f5635b6">&#9670;&nbsp;</a></span>create() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Task::createTask </td>
+          <td class="memname">void Task::create </td>
           <td>(</td>
           <td class="paramtype">void(*)(void *)&#160;</td>
           <td class="paramname"><em>TaskFunction</em></td><td>)</td>
@@ -199,16 +200,24 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the task function to be used. The tasks function is typically a infinite while- or for- loop. This functions initializes the task and immeadiately start being run by the schduler. If this function is called on a multi-core system, the freeRTOS will decide which core to run the task on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TaskFunction</td><td>A function that contains the code that runs in the task. Typically involves a infinite while or for loop. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a9e69da2e594ac1efa70facb0577310da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e69da2e594ac1efa70facb0577310da">&#9670;&nbsp;</a></span>createTask() <span class="overload">[2/2]</span></h2>
+<a id="a874d11efef69ea6917c13963b6ff2b2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874d11efef69ea6917c13963b6ff2b2e">&#9670;&nbsp;</a></span>create() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Task::createTask </td>
+          <td class="memname">void Task::create </td>
           <td>(</td>
           <td class="paramtype">void(*)(void *)&#160;</td>
           <td class="paramname"><em>TaskFunction</em>, </td>
