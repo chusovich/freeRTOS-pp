@@ -32,7 +32,8 @@ Queue::Queue(int size) {
 
 /**************************************************************************/
 /*! 
-    @brief  Create the queue. This function creates the queue and allocated memory for it in the stack. Use the createStatic() method to allocate it to static memory.
+    @brief  Create the queue. 
+    This function creates the queue and allocated memory for it in the stack. Use the createStatic() method to allocate it to static memory.
 */
 /**************************************************************************/
 bool Queue::create() {
@@ -47,7 +48,8 @@ bool Queue::create() {
 
 /**************************************************************************/
 /*! 
-    @brief  Create the queue. This function creates the queue and allocates it into static memory.
+    @brief  Create the queue. 
+    This function creates the queue and allocates it into static memory.
 */
 /**************************************************************************/
 bool Queue::createStatic() {
@@ -63,7 +65,8 @@ bool Queue::createStatic() {
 
 /**************************************************************************/
 /*! 
-    @brief  Delete the queue and remove it from memory. This function prevents the queue from being used any more and removes it from memory.
+    @brief  Delete the queue and remove it from memory. 
+    This function prevents the queue from being used any more and removes it from memory.
 */
 /**************************************************************************/
 void Queue::destroy() {
@@ -72,7 +75,8 @@ void Queue::destroy() {
 
 /**************************************************************************/
 /*! 
-    @brief  Remove the most recent message from the queue. This function waits for an item to arrive the the queue and remove it from the queue. It never times out.
+    @brief  Remove the most recent message from the queue. 
+    This function waits for an item to arrive the the queue and remove it from the queue. It never times out.
 */
 /**************************************************************************/
 bool Queue::dequeue(message_t *message) {
@@ -90,7 +94,8 @@ bool Queue::dequeue(message_t *message) {
 
 /**************************************************************************/
 /*! 
-    @brief  Waits for the message to arrive in the queue until the timeout period has elapsed. This function waits for an item to arrive the the queue and remove it from the queue, unless the timeout period elapses first, in which case it returns a null value.
+    @brief  Waits for the message to arrive in the queue until the timeout period has elapsed. 
+    This function waits for an item to arrive the the queue and remove it from the queue, unless the timeout period elapses first, in which case it returns a null value.
 */
 /**************************************************************************/
 bool Queue::dequeue(message_t *message, int msTimeout) {
@@ -106,6 +111,12 @@ bool Queue::dequeue(message_t *message, int msTimeout) {
   return status;
 }
 
+/**************************************************************************/
+/*! 
+    @brief  Put a message into the queue. 
+    If the queue is full, we wait the for the timeout duration and then return the function. This function returns true if the message was succesfully put in the queue. 
+*/
+/**************************************************************************/
 bool Queue::enqueue(message_t messageToSend, int msTimeout) {
   bool status;
   if (_queueHandle != NULL && uxQueueSpacesAvailable(_queueHandle) > 0) {
@@ -119,6 +130,12 @@ bool Queue::enqueue(message_t messageToSend, int msTimeout) {
   return status;
 }
 
+/**************************************************************************/
+/*! 
+    @brief  Put a message into the queue from an ISR. 
+    There is no timeout in this function as it must not block the ISR. As a result this function does not return a success message.  
+*/
+/**************************************************************************/
 void Queue::enqueueISR(message_t *messageToSend) {
   BaseType_t xHigherPriorityTaskWoken;
   xQueueSendFromISR(_queueHandle, messageToSend, &xHigherPriorityTaskWoken);
@@ -127,6 +144,12 @@ void Queue::enqueueISR(message_t *messageToSend) {
   }
 }
 
+/**************************************************************************/
+/*! 
+    @brief  Get a message from the queue from the queue without removing it. 
+    This function copies out the latest message in the queue, but does not remove it from the queue. This function never times-out, and only returns if there is an element in the queue.  
+*/
+/**************************************************************************/
 bool Queue::peek(message_t *message) {
   if (xQueuePeek(_queueHandle, message, portMAX_DELAY) == pdTRUE) {
     return true;
@@ -134,6 +157,12 @@ bool Queue::peek(message_t *message) {
   return false;
 }
 
+/**************************************************************************/
+/*! 
+    @brief  Get a message from the queue without removing. 
+    This function looks at a message from the queue and does not remove it. It returns if there is a message in the queue to view or if there is not element in the queue before the timeout period elapses.  
+*/
+/**************************************************************************/
 bool Queue::peek(message_t *message, int msTimeout) {
   if (xQueuePeek(_queueHandle, message, msTimeout / portTICK_PERIOD_MS) == pdTRUE) {
     return true;
