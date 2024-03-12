@@ -18,8 +18,8 @@ class Task {
 public:
   // functions
   Task(String name, int stackSize, int priority);
-  void createTask(void (*TaskFunction)(void*));
-  void createTask(void (*TaskFunction)(void*), byte core);
+  void create(void (*TaskFunction)(void*));
+  void create(void (*TaskFunction)(void*), byte core);
   void setPriority(int priority);
   void suspendTask();
   void resumeTask();
