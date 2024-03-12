@@ -1,4 +1,4 @@
-name: check-library
+name: Check Library
 on: [push, pull_request]
 jobs:
   lint:
