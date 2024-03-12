@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: jothepro/doxygen-awesome-css
-          path: doxygen-awesome
+          path: doxygen-awesome-css
 
       - name: What is here?
         run: ls
