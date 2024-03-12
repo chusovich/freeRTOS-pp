@@ -12,14 +12,17 @@ jobs:
         
       - name: Install Doxygen
         run: sudo apt-get install doxygen
-
-      - name: Where am I
-        run: pwd
-        
+       
       - name: Create documentation
         run: doxygen Doxyfile
+
+      - name: What is  am I
+        run: ls
       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: 'docs/html' # The folder the action should deploy.
+          
+      - name: What is  am I
+        run: ls
