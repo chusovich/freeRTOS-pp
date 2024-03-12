@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['create_0',['create',['../classQueue.html#af5e4c6b734af0a855ba495b0c13ba5d4',1,'Queue']]],
-  ['createstatic_1',['createStatic',['../classQueue.html#ae767aefb0e2e2adb30270347a09bc9d2',1,'Queue']]],
-  ['createtask_2',['createTask',['../classTask.html#a5e0605da358b12a4827829120831afcf',1,'Task']]]
+  ['_5ftimerhandle_0',['_timerHandle',['../class_timer.html#a2f678b8af358f81fe3a38ecab582e790',1,'Timer']]]
 ];

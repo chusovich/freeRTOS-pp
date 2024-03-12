@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['task_2ecpp_28',['Task.cpp',['../Task_8cpp.html',1,'']]],
-  ['task_2eh_29',['Task.h',['../Task_8h.html',1,'']]]
+  ['queue_2ecpp_45',['Queue.cpp',['../_queue_8cpp.html',1,'']]],
+  ['queue_2eh_46',['Queue.h',['../_queue_8h.html',1,'']]]
 ];

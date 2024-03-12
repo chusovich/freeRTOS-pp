@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resumetask_12',['resumeTask',['../classTask.html#a9b222d45ae58499dfbd85dfa094226de',1,'Task']]]
+  ['give_10',['give',['../class_mutex.html#ad1ccfa2510f9efa6eaa4d543a7fe4b9a',1,'Mutex']]]
 ];
