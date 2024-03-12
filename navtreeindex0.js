@@ -65,7 +65,6 @@ var NAVTREEINDEX0 =
 "index.html":[],
 "pages.html":[],
 "queue_page.html":[1],
-"queue_page.html#examples_sec":[1,0],
 "structmessage__t.html":[3,0,0],
 "structmessage__t.html#a2d83de3334c4901ea55a814f5eb92a9a":[3,0,0,1],
 "structmessage__t.html#a3d6ee2afc00cb94d06bb4ea548d15dc6":[3,0,0,0],
