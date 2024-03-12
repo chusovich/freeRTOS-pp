@@ -1,9 +1,4 @@
-#include "Arduino.h"
 #include "Timer.h"
-
-// Timer::Timer() {
-//   _timerHandle = NULL;
-// }
 
 bool Timer::create(const char *timerName, int msDuration, bool autoRestart, int timerID, void callbackFunction(TimerHandle_t timerHandle)) {
   if (autoRestart) {
