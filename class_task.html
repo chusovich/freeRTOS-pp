@@ -132,7 +132,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0ce71fa8c54468b3789b617b75be3fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that wraps common freeRTOS task functions. Here set a name of the task, the number of bytes in the stack to be allocated to the task, and the priority of the task the scheduler will use.  <a href="class_task.html#a0ce71fa8c54468b3789b617b75be3fee">More...</a><br /></td></tr>
 <tr class="separator:a0ce71fa8c54468b3789b617b75be3fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e0605da358b12a4827829120831afcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a5e0605da358b12a4827829120831afcf">createTask</a> (void(*TaskFunction)(void *))</td></tr>
-<tr class="memdesc:a5e0605da358b12a4827829120831afcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the task function to be used. The tasks function is typically a infinite while- or for- loop. This functions initializes the task and immeadiately start being run by the schduler. If this function is called on a multi-core system, the freeRTOS will decide which core to run the task on.  <a href="class_task.html#a5e0605da358b12a4827829120831afcf">More...</a><br /></td></tr>
 <tr class="separator:a5e0605da358b12a4827829120831afcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e69da2e594ac1efa70facb0577310da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a9e69da2e594ac1efa70facb0577310da">createTask</a> (void(*TaskFunction)(void *), byte core)</td></tr>
 <tr class="separator:a9e69da2e594ac1efa70facb0577310da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,14 +198,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Sets the task function to be used. The tasks function is typically a infinite while- or for- loop. This functions initializes the task and immeadiately start being run by the schduler. If this function is called on a multi-core system, the freeRTOS will decide which core to run the task on. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">TaskFunction</td><td>A function that contains the code that runs in the task. Typically involves a infinite while or for loop. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
