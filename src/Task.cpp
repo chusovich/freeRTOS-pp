@@ -4,12 +4,18 @@
  * @page task_page Tasks
  *
  * @section intro_sec Introduction
- * Tasks are main drivers in freeRTOS. 
+ * Tasks are core component of freeRTOS. Tasks are essentially an independent thread. 
+ *
+ * A task can be in one of four state: running, blocked, or suspended. The scheduler decides which tasks get to run. If a task is running, the scheduler is running that task. If a task is blocked, the task is waiting for 
+ * some resource and cannot run. A block task allows the scheduler to run other tasks. If two tasks are not blocked and ready to run, the scheduler choses the task with the highest priority. If the tasks are the same 
+ * priority, the schedule switches bewteen the tasks every tick cycle. 
  *
  * @section examples_sec Code Examples
  * Below is an example of the required elements to run a task
  *
  * @code
+ * #include <freeRTOS-pp.h>
+ *
  * Task myTask("myTaskName", 1024, 1); // task name, stack size in bytes, scheduler priority
  * 
  * void taskFunction() {
@@ -22,13 +28,6 @@
  * void setup() {
  *   Serial.begin(115200);
  *   myTask.create(taskFunction);
- * }
- *
-* void taskFunction() {
- *   for(;;) {
- *	Serial.println("Task running...");
- *	vTaskDelay(1000);
- *   }
  * }
  *
  * void loop() {
