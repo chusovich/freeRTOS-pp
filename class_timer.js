@@ -6,6 +6,5 @@ var class_timer =
     [ "destroy", "class_timer.html#a85acd36b87cf4d936e5817e40877013c", null ],
     [ "reset", "class_timer.html#a9d44db141960243bdfd227af50d8609d", null ],
     [ "start", "class_timer.html#a1fb859ba38f4c2fb36ea07bf30674e4a", null ],
-    [ "startFromISR", "class_timer.html#a831861de37ef23fcaa4722779761002f", null ],
-    [ "_timerHandle", "class_timer.html#a2f678b8af358f81fe3a38ecab582e790", null ]
+    [ "startFromISR", "class_timer.html#a831861de37ef23fcaa4722779761002f", null ]
 ];

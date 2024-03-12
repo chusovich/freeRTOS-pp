@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['changeduration_1',['changeDuration',['../class_timer.html#a14130722db58105804d8dd613693e018',1,'Timer']]],
-  ['create_2',['create',['../class_mutex.html#a6a8d4d6cfa7856c64ffebef1dedefb2e',1,'Mutex::create()'],['../class_queue.html#af5e4c6b734af0a855ba495b0c13ba5d4',1,'Queue::create()'],['../class_timer.html#a13ae9e57eae09c07b34e2304d543b0ff',1,'Timer::create()']]],
-  ['createstatic_3',['createStatic',['../class_mutex.html#ac2cd578c9399ffa4b2a4c4173cf6a23d',1,'Mutex::createStatic()'],['../class_queue.html#ae767aefb0e2e2adb30270347a09bc9d2',1,'Queue::createStatic()'],['../class_timer.html#a7c1d8b3338697e238fb2c422a3641a44',1,'Timer::createStatic()']]],
-  ['createtask_4',['createTask',['../class_task.html#a5e0605da358b12a4827829120831afcf',1,'Task::createTask(void(*TaskFunction)(void *))'],['../class_task.html#a9e69da2e594ac1efa70facb0577310da',1,'Task::createTask(void(*TaskFunction)(void *), byte core)']]]
+  ['dequeue_4',['dequeue',['../class_queue.html#a02c9035f38207efe34f5d50956b835ec',1,'Queue::dequeue(message_t *message)'],['../class_queue.html#a65c48ca67c848817fe4e1d99203d86f1',1,'Queue::dequeue(message_t *message, int msTimeout)']]],
+  ['destroy_5',['destroy',['../class_mutex.html#ac7ec9db96b713edd418966af1da837b3',1,'Mutex::destroy()'],['../class_queue.html#a5c1118eb6b378b3f359f07cc1cea6875',1,'Queue::destroy()'],['../class_timer.html#a85acd36b87cf4d936e5817e40877013c',1,'Timer::destroy()']]]
 ];
