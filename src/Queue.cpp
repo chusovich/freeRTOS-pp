@@ -6,7 +6,7 @@
  * @section intro_sec Introduction
  * This is an object oriented wrapper for freeRTOS queue functions
  *
- * @section examples_sec Code Examples
+ * @section intro_sec Code Examples
  * Here are some examples
  * 
  * @code
