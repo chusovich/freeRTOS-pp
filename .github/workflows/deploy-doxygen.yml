@@ -1,5 +1,11 @@
 name: Build and Deploy Doxygen
-on: [push]
+on:
+  push:
+    paths:
+      - /src
+      - /examples
+      - Doxyfile
+
 permissions:
   contents: write
 jobs:
