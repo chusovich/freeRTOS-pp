@@ -6,7 +6,27 @@
  * @section intro_sec Introduction
  * Tasks are main drivers in freeRTOS. 
  *
+ * @section examples_sec Code Examples
+ * Below is an example of the required elements to run a task
  *
+ * @code
+ * Task myTask("myTaskName",1024,1); // task name, stack size in bytes, scheduler priority
+ * void setup() {
+ *   Serial.begin(115200);
+ *   myTask.create()
+ * }
+ *
+* void taskFunction() {
+ *   for(;;) {
+ *	Serial.println("Task running...");
+ *	vTaskDelay(1000);
+ *   }
+ * }
+ *
+ * void loop() {
+ * }
+ *	
+ * @endcode
  */
 
 #include "Arduino.h"
@@ -74,8 +94,7 @@ void Task::createTask(void (*TaskFunction)(void*), byte core) {
 
 /**************************************************************************/
 /*!
-    @brief  Sets the priority the scheduler will use when scheduling the task. 
-	The priority of a tasks determines when a task will run if multiple tasks are in the ready state. The lowest priority is zero, the highest priority is seven.
+    @brief  Sets the priority the scheduler will use when scheduling the task. The priority of a tasks determines when a task will run if multiple tasks are in the ready state. The lowest priority is zero, the highest priority is seven.
     @param priority A function that contains the code to run int he task. Typically includes a infinite while or for loop.
 */
 /**************************************************************************/
