@@ -2,11 +2,11 @@ var indexSectionsWithContent =
 {
   0: "_cdefgimpqrst",
   1: "mqt",
-  2: "fmqt",
+  2: "fmqrt",
   3: "cdegmpqrst",
   4: "_is",
   5: "q",
-  6: "qt"
+  6: "fqt"
 };
 
 var indexSectionNames =
