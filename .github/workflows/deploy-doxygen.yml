@@ -9,8 +9,14 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+        
+      - name: Install Doxygen
+        run: sudo apt-get install doxygen
 
+      - name: Create documentation
+        run: doxygen Doxyfile
+      
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: docs
+          folder: 'docs/html' # The folder the action should deploy.
