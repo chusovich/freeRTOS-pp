@@ -1,12 +1,12 @@
 /*!
  * @file Queue.cpp
  *
- * @page Queues Queues
+ * @page queue_page Queues
  *
  * @section intro_sec Introduction
  * This is an object oriented wrapper for freeRTOS queue functions
  *
- * @section examples_sec Typical Examples
+ * @section examples_sec Code Examples
  * Here are some examples
  * 
  * @code
@@ -20,7 +20,6 @@
 
 #include "Arduino.h"
 #include "Queue.h"
-
 
 /**************************************************************************/
 /*! 

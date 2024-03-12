@@ -13,6 +13,7 @@ var NAVTREEINDEX0 =
 "_queue_8h.html#a7b055b284819e1b653684ff297fa18e3":[4,0,0,4,2],
 "_queue_8h_source.html":[4,0,0,4],
 "_queues.html":[1],
+"_queues.html#examples_sec":[1,0],
 "_task_8cpp.html":[4,0,0,5],
 "_task_8h.html":[4,0,0,6],
 "_task_8h_source.html":[4,0,0,6],

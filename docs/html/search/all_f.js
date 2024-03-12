@@ -7,5 +7,6 @@ var searchData=
   ['tasks_4',['Tasks',['../_tasks.html',1,'']]],
   ['timer_5',['Timer',['../class_timer.html',1,'']]],
   ['timer_2ecpp_6',['Timer.cpp',['../_timer_8cpp.html',1,'']]],
-  ['timer_2eh_7',['Timer.h',['../_timer_8h.html',1,'']]]
+  ['timer_2eh_7',['Timer.h',['../_timer_8h.html',1,'']]],
+  ['typical_20examples_8',['Typical Examples',['../_queues.html#examples_sec',1,'']]]
 ];

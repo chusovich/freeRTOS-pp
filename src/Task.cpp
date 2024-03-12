@@ -1,7 +1,7 @@
 /*!
  * @file Task.cpp
  *
- * @page Tasks Tasks
+ * @page task_page Tasks
  *
  * @section intro_sec Introduction
  * Tasks are main drivers in freeRTOS. 

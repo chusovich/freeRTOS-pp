@@ -31,7 +31,9 @@ var NAVTREE =
       [ "Author", "_overview.html#author", null ],
       [ "License", "_overview.html#license", null ]
     ] ],
-    [ "Queues", "_queues.html", null ],
+    [ "Queues", "_queues.html", [
+      [ "Typical Examples", "_queues.html#examples_sec", null ]
+    ] ],
     [ "Tasks", "_tasks.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
