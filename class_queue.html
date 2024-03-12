@@ -141,8 +141,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5c1118eb6b378b3f359f07cc1cea6875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the queue and remove it from memory. This function prevents the queue from being used any more and removes it from memory.  <a href="class_queue.html#a5c1118eb6b378b3f359f07cc1cea6875">More...</a><br /></td></tr>
 <tr class="separator:a5c1118eb6b378b3f359f07cc1cea6875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a934a105a122a0314631c3fd93c3ddf3f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queue.html#a934a105a122a0314631c3fd93c3ddf3f">enqueue</a> (<a class="el" href="structmessage__t.html">message_t</a> messageToSend, int msTimeout)</td></tr>
+<tr class="memdesc:a934a105a122a0314631c3fd93c3ddf3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put a message into the queue. If the queue is full, we wait the for the timeout duration and then return the function. This function returns true if the message was succesfully put in the queue.  <a href="class_queue.html#a934a105a122a0314631c3fd93c3ddf3f">More...</a><br /></td></tr>
 <tr class="separator:a934a105a122a0314631c3fd93c3ddf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73548f0b98583313c63a35d09842f132"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queue.html#a73548f0b98583313c63a35d09842f132">enqueueISR</a> (<a class="el" href="structmessage__t.html">message_t</a> *messageToSend)</td></tr>
+<tr class="memdesc:a73548f0b98583313c63a35d09842f132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put a message into the queue from an ISR. There is no timeout in this function as it must not block the ISR. As a result this function does not return a success message. <br  />
+  <a href="class_queue.html#a73548f0b98583313c63a35d09842f132">More...</a><br /></td></tr>
 <tr class="separator:a73548f0b98583313c63a35d09842f132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02c9035f38207efe34f5d50956b835ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queue.html#a02c9035f38207efe34f5d50956b835ec">dequeue</a> (<a class="el" href="structmessage__t.html">message_t</a> *message)</td></tr>
 <tr class="memdesc:a02c9035f38207efe34f5d50956b835ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the most recent message from the queue. This function waits for an item to arrive the the queue and remove it from the queue. It never times out.  <a href="class_queue.html#a02c9035f38207efe34f5d50956b835ec">More...</a><br /></td></tr>
@@ -151,8 +154,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a65c48ca67c848817fe4e1d99203d86f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the message to arrive in the queue until the timeout period has elapsed. This function waits for an item to arrive the the queue and remove it from the queue, unless the timeout period elapses first, in which case it returns a null value.  <a href="class_queue.html#a65c48ca67c848817fe4e1d99203d86f1">More...</a><br /></td></tr>
 <tr class="separator:a65c48ca67c848817fe4e1d99203d86f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec9839e0d9c43b66b37dd3f3d45676d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queue.html#aec9839e0d9c43b66b37dd3f3d45676d8">peek</a> (<a class="el" href="structmessage__t.html">message_t</a> *message)</td></tr>
+<tr class="memdesc:aec9839e0d9c43b66b37dd3f3d45676d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a message from the queue from the queue without removing it. This function copies out the latest message in the queue, but does not remove it from the queue. This function never times-out, and only returns if there is an element in the queue. <br  />
+  <a href="class_queue.html#aec9839e0d9c43b66b37dd3f3d45676d8">More...</a><br /></td></tr>
 <tr class="separator:aec9839e0d9c43b66b37dd3f3d45676d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ee9c724a9455f071a9625b14f50ceb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queue.html#a1ee9c724a9455f071a9625b14f50ceb0">peek</a> (<a class="el" href="structmessage__t.html">message_t</a> *message, int msTimeout)</td></tr>
+<tr class="memdesc:a1ee9c724a9455f071a9625b14f50ceb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a message from the queue without removing. This function looks at a message from the queue and does not remove it. It returns if there is a message in the queue to view or if there is not element in the queue before the timeout period elapses. <br  />
+  <a href="class_queue.html#a1ee9c724a9455f071a9625b14f50ceb0">More...</a><br /></td></tr>
 <tr class="separator:a1ee9c724a9455f071a9625b14f50ceb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -310,6 +317,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Put a message into the queue. If the queue is full, we wait the for the timeout duration and then return the function. This function returns true if the message was succesfully put in the queue. </p>
+
 </div>
 </div>
 <a id="a73548f0b98583313c63a35d09842f132"></a>
@@ -328,6 +337,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Put a message into the queue from an ISR. There is no timeout in this function as it must not block the ISR. As a result this function does not return a success message. <br  />
+ </p>
+
 </div>
 </div>
 <a id="aec9839e0d9c43b66b37dd3f3d45676d8"></a>
@@ -345,6 +357,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get a message from the queue from the queue without removing it. This function copies out the latest message in the queue, but does not remove it from the queue. This function never times-out, and only returns if there is an element in the queue. <br  />
+ </p>
 
 </div>
 </div>
@@ -373,6 +388,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get a message from the queue without removing. This function looks at a message from the queue and does not remove it. It returns if there is a message in the queue to view or if there is not element in the queue before the timeout period elapses. <br  />
+ </p>
 
 </div>
 </div>
