@@ -7,20 +7,24 @@ Task fastBlinkyTask("Fast Blinky",1024,1);
 #define LED2 2 // fast led pin
 
 void blinkSlow(void *) {
-  digitalWrite(LED1, HIGH);
-  vTaskDelay(200);
-  digitalWrite(LED1, LOW);
-  vTaskDelay(200);
+  for(;;) {
+    digitalWrite(LED1, HIGH);
+    vTaskDelay(500);
+    digitalWrite(LED1, LOW);
+    vTaskDelay(500);
+  }
 }
 
 void blinkFast(void *) {
-  digitalWrite(LED2, HIGH);
-  vTaskDelay(200);
-  digitalWrite(LED2, LOW);
-  vTaskDelay(200);
+  for(;;) {
+    digitalWrite(LED1, HIGH);
+    vTaskDelay(100);
+    digitalWrite(LED1, LOW);
+    vTaskDelay(100);
+  }
 }
-
 void setup() {
+  pinMode(LED1, OUTPUT);
   slowBlinkyTask.create(blinkSlow); // start the task
   fastBlinkyTask.create(blinkFast);
 }
@@ -29,5 +33,11 @@ void loop() {
   vTaskDelay(10000);
   slowBlinkyTask.suspend(); // stop the slow blinky task after 10 sec
   vTaskDelay(5000);
-  fastBlinkyTask.suspend(); // stop the fast blinky task after 5 more sec
+  slowBlinkyTask.resume(); // start blinking slowly again
+  fastBlinkyTask.suspend(); // stop the fast blinky task
+  vTaskDelay(5000);
+  slowBlinkTask.destroy();
+  fastBlinklyTask.resume();
+  vTaskDelay(2000);
+  fastBlinkyTask.destroy();
 }
