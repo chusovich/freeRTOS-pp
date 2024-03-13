@@ -1,5 +1,5 @@
 /*!
- * @file freeRTOS_API.h
+ * @file freeRTOS-pp.h
  *
  * @page Overview
  *
@@ -17,9 +17,8 @@
  *
  */
 
-
-#ifndef freeRTOS_API_H
-#define freeRTOS_API_H
+#ifndef freeRTOS-pp_H
+#define freeRTOS-pp_H
 
 #include "Task.h"
 #include "Queue.h"
