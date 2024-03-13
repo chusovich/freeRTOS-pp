@@ -140,10 +140,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acc93078022eabed8325f164e4eedc37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority the scheduler will use when scheduling the task. The priority of a tasks determines when a task will run if multiple tasks are in the ready state. The lowest priority is zero, the highest priority is seven.  <a href="class_task.html#acc93078022eabed8325f164e4eedc37a">More...</a><br /></td></tr>
 <tr class="separator:acc93078022eabed8325f164e4eedc37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae95f8af6f74b4c956b82698b98454cd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#ae95f8af6f74b4c956b82698b98454cd2">suspend</a> ()</td></tr>
+<tr class="memdesc:ae95f8af6f74b4c956b82698b98454cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the task from running. This function stops the task from running, but it does not remove from memory. It puts it in the 'suspended' state.  <a href="class_task.html#ae95f8af6f74b4c956b82698b98454cd2">More...</a><br /></td></tr>
 <tr class="separator:ae95f8af6f74b4c956b82698b98454cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fc7f3a2f5ebd910f22d1134d0dfcb2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a8fc7f3a2f5ebd910f22d1134d0dfcb2f">resume</a> ()</td></tr>
+<tr class="memdesc:a8fc7f3a2f5ebd910f22d1134d0dfcb2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts running the task again if suspended. This function moves a task from the suspended to the ready state. The schedule will immeadiately start to run the task if no higher priority task is in a ready state.  <a href="class_task.html#a8fc7f3a2f5ebd910f22d1134d0dfcb2f">More...</a><br /></td></tr>
 <tr class="separator:a8fc7f3a2f5ebd910f22d1134d0dfcb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4e29d38e9dbdb31a409d3e595f7ee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a3d4e29d38e9dbdb31a409d3e595f7ee9">destroy</a> ()</td></tr>
+<tr class="memdesc:a3d4e29d38e9dbdb31a409d3e595f7ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the task and removes it from memory.  <a href="class_task.html#a3d4e29d38e9dbdb31a409d3e595f7ee9">More...</a><br /></td></tr>
 <tr class="separator:a3d4e29d38e9dbdb31a409d3e595f7ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -253,6 +256,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Stops the task and removes it from memory. </p>
+
 </div>
 </div>
 <a id="a8fc7f3a2f5ebd910f22d1134d0dfcb2f"></a>
@@ -269,6 +274,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Starts running the task again if suspended. This function moves a task from the suspended to the ready state. The schedule will immeadiately start to run the task if no higher priority task is in a ready state. </p>
 
 </div>
 </div>
@@ -312,6 +319,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Stops the task from running. This function stops the task from running, but it does not remove from memory. It puts it in the 'suspended' state. </p>
 
 </div>
 </div>
