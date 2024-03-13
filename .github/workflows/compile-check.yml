@@ -1,9 +1,7 @@
 name: Compile Examples
-on:
-  push:
-    paths:
-      - /src
-      - /examples/**
+on: 
+  - push
+  - pull_request
 
 jobs:
   build-for-esp32:
