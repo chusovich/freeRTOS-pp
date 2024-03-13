@@ -36,8 +36,8 @@ void loop() {
   slowBlinkyTask.resume(); // start blinking slowly again
   fastBlinkyTask.suspend(); // stop the fast blinky task
   vTaskDelay(5000);
-  slowBlinkTask.destroy();
-  fastBlinklyTask.resume();
+  slowBlinkTask.destroy(); // delete the slow blinkly task
+  fastBlinklyTask.resume(); // start fast blinky task
   vTaskDelay(2000);
-  fastBlinkyTask.destroy();
+  fastBlinkyTask.destroy(); // stop the fast blinky task
 }
