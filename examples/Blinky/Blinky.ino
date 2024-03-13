@@ -1,5 +1,10 @@
 #include <freeRTOS_API.h>
 
+/* Basic Task Example
+  This sketch uses two tasks to blink two leds simultaneously at two different rate.
+  The tasks are paused and resumes after different amounts of time and eventually the tasks are deleted
+*/
+
 Task slowBlinkyTask("Slow Blinky",1024,1); // name, task stack size in bytes, priority
 Task fastBlinkyTask("Fast Blinky",1024,1);
 
@@ -25,6 +30,7 @@ void blinkFast(void *) {
 }
 void setup() {
   pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
   slowBlinkyTask.create(blinkSlow); // start the task
   fastBlinkyTask.create(blinkFast);
 }
