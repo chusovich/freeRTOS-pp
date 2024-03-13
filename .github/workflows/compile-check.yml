@@ -3,7 +3,7 @@ on:
   push:
     paths:
       - /src
-      - /examples
+      - /examples/**
 
 jobs:
   build-for-esp32:
