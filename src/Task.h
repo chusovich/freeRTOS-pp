@@ -21,8 +21,9 @@ public:
   void create(void (*TaskFunction)(void*));
   void create(void (*TaskFunction)(void*), byte core);
   void setPriority(int priority);
-  void suspendTask();
-  void resumeTask();
+  void suspend();
+  void resume();
+  void destroy();
   
 #if defined(ARDUINO_ARCH_RP2040)
   void getCoreAffinity();
