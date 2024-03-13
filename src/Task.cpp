@@ -114,7 +114,7 @@ void Task::setPriority(int priority) {
     @brief  Stops the task from running. This function stops the task from running, but it does not remove from memory. It puts it in the 'suspended' state.
 */
 /**************************************************************************/
-void Task::suspendTask() {
+void Task::suspend() {
   vTaskSuspend(_taskHandle);
 }
 
@@ -123,8 +123,17 @@ void Task::suspendTask() {
     @brief  Starts running the task again if suspended. This function moves a task from the suspended to the ready state. The schedule will immeadiately start to run the task if no higher priority task is in a ready state.
 */
 /**************************************************************************/
-void Task::resumeTask() {
+void Task::resume() {
   vTaskResume(_taskHandle);
+}
+
+/**************************************************************************/
+/*!
+    @brief  Stops the task and removes it from memory.
+*/
+/**************************************************************************/
+void Task::destroy() {
+  vTaskDelete(_taskHandle);
 }
 
 #if defined(ARDUINO_ARCH_RP2040)
