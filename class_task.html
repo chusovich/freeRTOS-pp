@@ -139,12 +139,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acc93078022eabed8325f164e4eedc37a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#acc93078022eabed8325f164e4eedc37a">setPriority</a> (int priority)</td></tr>
 <tr class="memdesc:acc93078022eabed8325f164e4eedc37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority the scheduler will use when scheduling the task. The priority of a tasks determines when a task will run if multiple tasks are in the ready state. The lowest priority is zero, the highest priority is seven.  <a href="class_task.html#acc93078022eabed8325f164e4eedc37a">More...</a><br /></td></tr>
 <tr class="separator:acc93078022eabed8325f164e4eedc37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1299c006eb4ebba37edf810e221649c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#ae1299c006eb4ebba37edf810e221649c">suspendTask</a> ()</td></tr>
-<tr class="memdesc:ae1299c006eb4ebba37edf810e221649c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the task from running. This function stops the task from running, but it does not remove from memory. It puts it in the 'suspended' state.  <a href="class_task.html#ae1299c006eb4ebba37edf810e221649c">More...</a><br /></td></tr>
-<tr class="separator:ae1299c006eb4ebba37edf810e221649c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b222d45ae58499dfbd85dfa094226de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a9b222d45ae58499dfbd85dfa094226de">resumeTask</a> ()</td></tr>
-<tr class="memdesc:a9b222d45ae58499dfbd85dfa094226de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts running the task again if suspended. This function moves a task from the suspended to the ready state. The schedule will immeadiately start to run the task if no higher priority task is in a ready state.  <a href="class_task.html#a9b222d45ae58499dfbd85dfa094226de">More...</a><br /></td></tr>
-<tr class="separator:a9b222d45ae58499dfbd85dfa094226de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae95f8af6f74b4c956b82698b98454cd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#ae95f8af6f74b4c956b82698b98454cd2">suspend</a> ()</td></tr>
+<tr class="separator:ae95f8af6f74b4c956b82698b98454cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fc7f3a2f5ebd910f22d1134d0dfcb2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a8fc7f3a2f5ebd910f22d1134d0dfcb2f">resume</a> ()</td></tr>
+<tr class="separator:a8fc7f3a2f5ebd910f22d1134d0dfcb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d4e29d38e9dbdb31a409d3e595f7ee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a3d4e29d38e9dbdb31a409d3e595f7ee9">destroy</a> ()</td></tr>
+<tr class="separator:a3d4e29d38e9dbdb31a409d3e595f7ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0ce71fa8c54468b3789b617b75be3fee"></a>
@@ -238,14 +238,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9b222d45ae58499dfbd85dfa094226de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b222d45ae58499dfbd85dfa094226de">&#9670;&nbsp;</a></span>resumeTask()</h2>
+<a id="a3d4e29d38e9dbdb31a409d3e595f7ee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d4e29d38e9dbdb31a409d3e595f7ee9">&#9670;&nbsp;</a></span>destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Task::resumeTask </td>
+          <td class="memname">void Task::destroy </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -253,7 +253,22 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Starts running the task again if suspended. This function moves a task from the suspended to the ready state. The schedule will immeadiately start to run the task if no higher priority task is in a ready state. </p>
+</div>
+</div>
+<a id="a8fc7f3a2f5ebd910f22d1134d0dfcb2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc7f3a2f5ebd910f22d1134d0dfcb2f">&#9670;&nbsp;</a></span>resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Task::resume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -283,22 +298,20 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae1299c006eb4ebba37edf810e221649c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1299c006eb4ebba37edf810e221649c">&#9670;&nbsp;</a></span>suspendTask()</h2>
+<a id="ae95f8af6f74b4c956b82698b98454cd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95f8af6f74b4c956b82698b98454cd2">&#9670;&nbsp;</a></span>suspend()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Task::suspendTask </td>
+          <td class="memname">void Task::suspend </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Stops the task from running. This function stops the task from running, but it does not remove from memory. It puts it in the 'suspended' state. </p>
 
 </div>
 </div>

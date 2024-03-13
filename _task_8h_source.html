@@ -137,29 +137,31 @@ $(document).ready(function(){initNavTree('_task_8h_source.html',''); initResizab
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_task.html#a5edcce9d67db9d0c39116ac33f5635b6">create</a>(<span class="keywordtype">void</span> (*TaskFunction)(<span class="keywordtype">void</span>*));</div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_task.html#a874d11efef69ea6917c13963b6ff2b2e">   22</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_task.html#a874d11efef69ea6917c13963b6ff2b2e">create</a>(<span class="keywordtype">void</span> (*TaskFunction)(<span class="keywordtype">void</span>*), <span class="keywordtype">byte</span> core);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_task.html#acc93078022eabed8325f164e4eedc37a">setPriority</a>(<span class="keywordtype">int</span> priority);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_task.html#ae1299c006eb4ebba37edf810e221649c">suspendTask</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_task.html#a9b222d45ae58499dfbd85dfa094226de">resumeTask</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#if defined(ARDUINO_ARCH_RP2040)</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">void</span> getCoreAffinity();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// data</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  TaskHandle_t _taskHandle;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  String _name;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span> _stackSize;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">int</span> _priority;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_task.html#ae95f8af6f74b4c956b82698b98454cd2">   24</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_task.html#ae95f8af6f74b4c956b82698b98454cd2">suspend</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_task.html#a8fc7f3a2f5ebd910f22d1134d0dfcb2f">   25</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_task.html#a8fc7f3a2f5ebd910f22d1134d0dfcb2f">resume</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_task.html#a3d4e29d38e9dbdb31a409d3e595f7ee9">   26</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_task.html#a3d4e29d38e9dbdb31a409d3e595f7ee9">destroy</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#if defined(ARDUINO_ARCH_RP2040)</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">void</span> getCoreAffinity();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// data</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  TaskHandle_t _taskHandle;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  String _name;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">int</span> _stackSize;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">int</span> _priority;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_task_8h_html"><div class="ttname"><a href="_task_8h.html">Task.h</a></div></div>
 <div class="ttc" id="aclass_task_html"><div class="ttname"><a href="class_task.html">Task</a></div><div class="ttdef"><b>Definition:</b> Task.h:17</div></div>
 <div class="ttc" id="aclass_task_html_a0ce71fa8c54468b3789b617b75be3fee"><div class="ttname"><a href="class_task.html#a0ce71fa8c54468b3789b617b75be3fee">Task::Task</a></div><div class="ttdeci">Task(String name, int stackSize, int priority)</div><div class="ttdoc">Class that wraps common freeRTOS task functions. Here set a name of the task, the number of bytes in ...</div><div class="ttdef"><b>Definition:</b> Task.cpp:47</div></div>
+<div class="ttc" id="aclass_task_html_a3d4e29d38e9dbdb31a409d3e595f7ee9"><div class="ttname"><a href="class_task.html#a3d4e29d38e9dbdb31a409d3e595f7ee9">Task::destroy</a></div><div class="ttdeci">void destroy()</div></div>
 <div class="ttc" id="aclass_task_html_a5edcce9d67db9d0c39116ac33f5635b6"><div class="ttname"><a href="class_task.html#a5edcce9d67db9d0c39116ac33f5635b6">Task::create</a></div><div class="ttdeci">void create(void(*TaskFunction)(void *))</div><div class="ttdoc">Sets the task function to be used. The tasks function is typically a infinite while- or for- loop....</div><div class="ttdef"><b>Definition:</b> Task.cpp:59</div></div>
 <div class="ttc" id="aclass_task_html_a874d11efef69ea6917c13963b6ff2b2e"><div class="ttname"><a href="class_task.html#a874d11efef69ea6917c13963b6ff2b2e">Task::create</a></div><div class="ttdeci">void create(void(*TaskFunction)(void *), byte core)</div></div>
-<div class="ttc" id="aclass_task_html_a9b222d45ae58499dfbd85dfa094226de"><div class="ttname"><a href="class_task.html#a9b222d45ae58499dfbd85dfa094226de">Task::resumeTask</a></div><div class="ttdeci">void resumeTask()</div><div class="ttdoc">Starts running the task again if suspended. This function moves a task from the suspended to the read...</div><div class="ttdef"><b>Definition:</b> Task.cpp:126</div></div>
+<div class="ttc" id="aclass_task_html_a8fc7f3a2f5ebd910f22d1134d0dfcb2f"><div class="ttname"><a href="class_task.html#a8fc7f3a2f5ebd910f22d1134d0dfcb2f">Task::resume</a></div><div class="ttdeci">void resume()</div></div>
 <div class="ttc" id="aclass_task_html_acc93078022eabed8325f164e4eedc37a"><div class="ttname"><a href="class_task.html#acc93078022eabed8325f164e4eedc37a">Task::setPriority</a></div><div class="ttdeci">void setPriority(int priority)</div><div class="ttdoc">Sets the priority the scheduler will use when scheduling the task. The priority of a tasks determines...</div><div class="ttdef"><b>Definition:</b> Task.cpp:108</div></div>
-<div class="ttc" id="aclass_task_html_ae1299c006eb4ebba37edf810e221649c"><div class="ttname"><a href="class_task.html#ae1299c006eb4ebba37edf810e221649c">Task::suspendTask</a></div><div class="ttdeci">void suspendTask()</div><div class="ttdoc">Stops the task from running. This function stops the task from running, but it does not remove from m...</div><div class="ttdef"><b>Definition:</b> Task.cpp:117</div></div>
+<div class="ttc" id="aclass_task_html_ae95f8af6f74b4c956b82698b98454cd2"><div class="ttname"><a href="class_task.html#ae95f8af6f74b4c956b82698b98454cd2">Task::suspend</a></div><div class="ttdeci">void suspend()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -4,5 +4,5 @@ var searchData=
   ['start_26',['start',['../class_timer.html#a1fb859ba38f4c2fb36ea07bf30674e4a',1,'Timer']]],
   ['startfromisr_27',['startFromISR',['../class_timer.html#a831861de37ef23fcaa4722779761002f',1,'Timer']]],
   ['string_28',['string',['../structmessage__t.html#a2d83de3334c4901ea55a814f5eb92a9a',1,'message_t']]],
-  ['suspendtask_29',['suspendTask',['../class_task.html#ae1299c006eb4ebba37edf810e221649c',1,'Task']]]
+  ['suspend_29',['suspend',['../class_task.html#ae95f8af6f74b4c956b82698b98454cd2',1,'Task']]]
 ];
